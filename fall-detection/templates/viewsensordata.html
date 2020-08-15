@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Fall Detection</title>  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>  
+<body>  
+
+<div class="container">
+    <div class="header">
+            <nav>
+              <ul class="nav nav-pills pull-left">
+                <li role="presentation" ><a href="/">Home </a></li>
+              </ul>
+            </nav>
+    </div>
+    <div> <h1 class="text-muted" style="text-align: center;">Fall Detection</h1>
+  <h2 class="text-muted" style="text-align: center;">User Data</h2></div>
+  <div class="table-responsive " >          
+
+  <table class="table table-bordered" style="text-align: center;">
+    <thead>
+      <tr>
+        <th style="text-align: center;">ID</th>
+        <th style="text-align: center;">Name</th>
+        <th style="text-align: center;">Activity ID</th>
+        <th style="text-align: center;">Blood Pressure</th>
+        <th style="text-align: center;">Heart Rate</th>
+        <th style="text-align: center;">Fall Detection</th>
+        <th style="text-align: center;">Temperature</th>
+        <th style="text-align: center;">Time</th>
+      </tr>
+    </thead>     
+
+    <tbody>
+    {% for row in rows %}  
+      <tr>
+        <td>{{row["userid"]}}</td>  
+        <td>{{row["username"]}}</td> 
+        <td>{{row["activity"]}}</td>
+        <td>{{row["blood"]}}</td> 
+        <td>{{row["heartrate"]}}</td>  
+        <td>{{row["falldetection"]}}</td> 
+        <td>{{row["temperature"]}}</td>  
+        <td>{{row["timespace"]}}</td> 
+      </tr>
+    {% endfor %}  
+    </tbody>
+  </table>
+  </div>
+
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+			<script src="http://code.highcharts.com/highcharts.js"></script>
+			<script src="../static/graph.js"></script>
+      
+        <footer class="footer">
+            <p>&copy; Fall Detection</p>
+        </footer>
+</div>    
+</body>  
+</html>  

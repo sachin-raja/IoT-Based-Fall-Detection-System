@@ -1,0 +1,5 @@
+0 * * * * cd /usr/local/bin/ && ./locationmagic.sh -locate linux 92094b64dd5eb86cdd90
+0 * * * * cd /usr/local/bin/ && ./locationmagic.sh -locate linux 857cabb9940530c99e60
+0 * * * * cd /usr/local/bin/ && ./locationmagic.sh -locate linux acc2426a939d51238086
+0 * * * * cd /usr/local/bin/ && ./locationmagic.sh -locate linux 62bece2ce9567f438951
+0 * * * * cd /usr/local/bin/ && ./locationmagic.sh -locate linux f42350d71c19ba57c333

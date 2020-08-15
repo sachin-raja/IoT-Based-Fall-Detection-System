@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Fall Detection</title>  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>  
+<body>  
+
+<div class="container">
+    <div class="header">
+            <nav>
+              <ul class="nav nav-pills pull-left">
+                <li role="presentation" ><a href="/">Home </a></li>
+              </ul>
+            </nav>
+    </div>
+    <div> <h1 class="text-muted" style="text-align: center;">Fall Detection</h1>
+  <h2 class="text-muted" style="text-align: center;">List of Users</h2></div>
+  <div class="table-responsive " >          
+
+  <table class="table table-bordered" style="text-align: center;">
+    <thead>
+      <tr>
+        <th style="text-align: center;">ID</th>
+        <th style="text-align: center;">Name</th>
+        <th style="text-align: center;">Email</th>
+        <th style="text-align: center;">Physician ID</th>
+      </tr>
+    </thead>     
+
+    <tbody>
+    {% for row in rows %}  
+      <tr>
+        <td>{{row["userid"]}}</td>  
+        <td>{{row["name"]}}</td>  
+        <td>{{row["emailid"]}}</td>  
+        <td>{{row["physicianid"]}}</td>  
+      </tr>
+    {% endfor %}  
+    </tbody>
+  </table>
+  </div>
+        <footer class="footer">
+            <p>&copy; Fall Detection</p>
+        </footer>
+</div>    
+</body>  
+</html>  

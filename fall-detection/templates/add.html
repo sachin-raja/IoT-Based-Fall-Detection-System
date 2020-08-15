@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <title>Fall Detection</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="../static/login.css" rel="stylesheet">  
+</head>  
+<body>
+  <script type="text/javascript">
+  function OnGrade(v){
+    var x= document.getElementById("phy");
+    if (v==="Patient"){
+      x.sytle.display="block";
+      }
+    else{
+      x.style.display="none";
+    }
+    }
+</script>  
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/">Home </a></li>
+          </ul>
+        </nav>
+        <h1 class="text-muted" style="text-align: center;">Fall Detection</h1>
+      </div>
+    <div class="jumbotron">
+    <h2 style="text-align: center;">Patient Monitoring</h2>
+      <form class="form-signin" action = "/savedetails" method="post">
+        <label for="inputType" class="sr-only">Category</label>
+                <select name="Category" class="selectpicker form-control" required autofocus onchange="OnGrade(this.value);">
+                        <option value="Patient">Patient</option>
+                        <option value="Physician">Physician</option>
+
+                </select>
+        <label for="inputName" class="sr-only">Name</label>
+        <input type="text" name="name" id="inputName" class="form-control" placeholder="Name" required autofocus>
+        <label for="inputEmail" class="sr-only">Email Address</label>
+        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div id="phy" style="display: hidden">
+        <label type="text" for="inputPhysician" class="sr-only">Name</label>
+        <input type="text" name="inputPhysician" id="inputPhysician" class="form-control" placeholder="Physician ID" required autofocus>
+        </div>
+    &nbsp;
+        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="submit" value="Submit">Sign Up</button>
+      </form> 
+  </div>
+      <footer class="footer">
+        <p>&copy; Fall Detection</p>
+      </footer>
+    </div>
+    
+
+</body>  
+</html>  
